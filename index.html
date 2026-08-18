@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <input id="firstNumber" type="number" placeholder="Ensimmäinen numero">
+    
+    <select id="operation">
+        <option value="sum">Summa (+)</option>
+        <option value="subtract">Erotus (-)</option>
+        <option value="multiply">Kertolasku (×)</option>
+        <option value="divide">Jakolasku (÷)</option>
+    </select>
+
+    <input id="secondNumber" type="number" placeholder="Toinen numero">
+
+    <button id="calculate">Laske</button>
+
+    <h2>Tulos: <span id="result">-</span></h2>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
