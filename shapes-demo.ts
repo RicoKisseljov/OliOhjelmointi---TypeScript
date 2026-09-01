@@ -4,31 +4,27 @@ const canvas = document.querySelector("canvas") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 
 const rectangle = {
-  x: 50,
-  y: 50,
-  width: 200,
-  height: 100
-};
+    x: 10,
+    y: 20,
+    width: 100,
+    height: 50,
 
-ctx.fillRect(
-  rectangle.x,
-  rectangle.y,
-  rectangle.width,
-  rectangle.height
-);
+    draw: function() {
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+};
 
 const circle = {
-  x: 350,
-  y: 150,
-  radius: 50
+    x: 200,
+    y: 100,
+    radius: 50,
+
+    draw: function() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
 };
 
-ctx.beginPath();
-ctx.arc(
-  circle.x,
-  circle.y,
-  circle.radius,
-  0,
-  Math.PI * 2
-);
-ctx.fill();
+rectangle.draw();
+circle.draw();
